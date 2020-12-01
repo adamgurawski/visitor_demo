@@ -8,13 +8,15 @@ class Lizard;
 
 class IVisitor
 {
-protected:
-  IVisitor() = default;
-
 public:
+  virtual ~IVisitor() = default;
+
   virtual void Visit(Animal* animal) = 0;
   virtual void Visit(Rabbit* rabbit) = 0;
   virtual void Visit(Lizard* lizard) = 0;
+
+protected:
+  IVisitor() = default;
 };
 
 class PrintAnimalTypeVisitor : public IVisitor

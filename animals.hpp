@@ -7,6 +7,8 @@ class Animal
 public:
   virtual void Accept(IVisitor* visitor) = 0;
 
+  virtual ~Animal() = default;
+
 protected:
   Animal() = default;
 }; // class Animal
